@@ -1,0 +1,12 @@
+# PhysioNet data-use agreements prohibit redistribution of MIMIC-IV and
+# eICU-CRD or of patient-level data derived from them. Everything written to
+# cache/ is derived from credentialed data and must never be committed.
+cache/
+*.csv
+*.csv.gz
+*.html
+
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
