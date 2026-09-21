@@ -43,7 +43,7 @@ first use. Python 3.11 or later.
 ```bash
 export MIMIC_IV_DIR=/path/to/physionet.org/files/mimiciv/3.1
 export EICU_CRD_DIR=/path/to/physionet.org/files/eicu-crd/2.0
-./run_all.sh
+bash run_all.sh
 ```
 
 Scripts can also be run individually from the repository root, for example
