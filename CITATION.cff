@@ -1,11 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the associated article."
-title: "Representation non-invariance without performance loss in clinical prediction: analysis code"
+title: "Representation non-invariance with bounded performance loss in clinical prediction: analysis code"
 authors:
   - family-names: Mikkelsen
     given-names: Yngve
     orcid: "https://orcid.org/0000-0003-1543-3805"
-version: 1.0.0
-doi: "[ZENODO DOI]"
+version: 1.1.0
 license: MIT
-repository-code: "[GITHUB URL]"
+repository-code: "https://github.com/yngvemikkelsen/ehr-representation-noninvariance"
