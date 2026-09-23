@@ -4,7 +4,8 @@
 # dependencies = ["numpy"]
 # ///
 """
-Implementation check for the held-out log-score estimator (manuscript §3.6).
+Implementation check for the held-out log-score estimator
+(manuscript: Methods, Statistical analysis).
 
 Out-of-sample log-likelihood gain is used in place of a permutation null on
 the grounds that an uninformative feature costs likelihood on data it was not

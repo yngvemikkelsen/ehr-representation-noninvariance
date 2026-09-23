@@ -4,7 +4,7 @@ Analysis code for:
 
 > Mikkelsen Y. *Representation non-invariance with bounded performance loss
 > in clinical prediction: an empirical EHR study across MIMIC-IV and
-> eICU-CRD.* Manuscript submitted to the Journal of Biomedical Informatics.
+> eICU-CRD.* Manuscript submitted for publication.
 
 The study shows that a clinical EHR feature can be recorded on structurally
 non-equivalent categorical supports while downstream prediction performance
@@ -60,14 +60,14 @@ Tables 2 and 3, completes in about 30 minutes including its own two passes.
 
 | Script | Manuscript result |
 |---|---|
-| `noise_feature_check.py` | §3.6 implementation check: an uninformative 20-level feature gives a positive in-sample and negative held-out gain. No clinical data. |
-| `corr_heatmap.py` | §3.2 selection scan: the lung-sound presence indicators are the most strongly correlated pair among the 40 most frequently charted items (r = 0.996). |
-| `check_lungsounds.py` | §4.1 co-population: 93,596 of 93,603 stays have both lower-lobe fields; 99.64% of right-lobe entries have a same-timestamp left-lobe entry. |
-| `lung_crosstab_full.py` | §4.1 full right × left cross-tabulation; 15-string union; κ = 0.8704. |
-| `verify_kappa.py` | §4.1 κ = 0.8801 after merging the side-specific spellings; 9,890 reclassified pairs. |
-| `caregiver_check.py` | §4.1 the same `caregiver_id` entered both fields in 99.91% of 1,806,527 pairs. |
-| `eicu_breath_sounds.py` | §4.2 eICU-CRD co-population (99.76%), pooled κ = 0.9009, per-hospital range, and within-eICU vocabulary comparison (mean Jaccard 0.838). |
-| `rerun.py` | §4.3–4.4 Table 2, the sensitivity analysis, Table 3, the patient-level permutation noise floor, and verification of the fitter against L-BFGS. |
+| `noise_feature_check.py` | Statistical analysis: implementation check: an uninformative 20-level feature gives a positive in-sample and negative held-out gain. No clinical data. |
+| `corr_heatmap.py` | Within-MIMIC representation analysis: selection scan: the lung-sound presence indicators are the most strongly correlated pair among the 40 most frequently charted items (r = 0.996). |
+| `check_lungsounds.py` | Results: co-population: 93,596 of 93,603 stays have both lower-lobe fields; 99.64% of right-lobe entries have a same-timestamp left-lobe entry. |
+| `lung_crosstab_full.py` | Results: full right × left cross-tabulation; 15-string union; κ = 0.8704. |
+| `verify_kappa.py` | Results: kappa 0.8801 after merging the side-specific spellings; 9,890 reclassified pairs. |
+| `caregiver_check.py` | Results: the same `caregiver_id` entered both fields in 99.91% of 1,806,527 pairs. |
+| `eicu_breath_sounds.py` | Results: eICU-CRD co-population (99.76%), pooled κ = 0.9009, per-hospital range, and within-eICU vocabulary comparison (mean Jaccard 0.838). |
+| `rerun.py` | Results: Table 2, the sensitivity analysis, Table 3, the patient-level permutation noise floor, and verification of the fitter against L-BFGS. |
 
 `rerun.py` implements the downstream experiment in a single pipeline:
 cross-validation folds and bootstrap resampling grouped by patient
